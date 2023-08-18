@@ -1,16 +1,23 @@
 import PropTypes from 'prop-types'
 import '../style.css'
-import Button from './Button'
+// import Button from './Button' 
 
-
-const Header = ({title, onAdd}) => {
+const Header = ({ onAdd}) => {
   
-   
+    // const [show,setShow]=useState(false);
+
+    // const handleclick=()=>{
+      
+    // }
+
   return (
     <>
+    {/* {console.log(show)} */}
         <header className='header'>
-            <h1>{title}</h1>
-            <Button color="green" text="Add" onClick={onAdd} id='form'/>
+            <h1>Task Traker</h1>
+            {/* <Button color="green" text="Add" show={onAdd}/> */}
+           <button onClick={() => onAdd()} className='btn' style={styleAdd}>Add</button>
+
         </header>
     </>
   )
@@ -24,8 +31,7 @@ Header.prototypes={
     title:PropTypes.string.isRequired
 }
 // css in JS
-// const styleheader={
-//     color:"red",
-//     backgroundColor:"Blue"
-// }
+const styleAdd={
+  backgroundColor:"green",
+}
 export default Header

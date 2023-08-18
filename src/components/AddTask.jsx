@@ -14,7 +14,7 @@ const AddTask = ({onAdd}) => {
         alert("Please add a task !")
         return
     }
-    onAdd({text,day,reminder})
+    onAdd({text,day,reminder});
 
 
     setText("")
@@ -25,7 +25,7 @@ const AddTask = ({onAdd}) => {
    
 
   return (
-    <form className="add-form" onSubmit={onSubmit}>
+    <form className="open" onSubmit={onSubmit}>
       <div className="form-control">
         <label htmlFor="">Task</label>
         <input type="text" placeholder="Add Task" value={text}
@@ -50,6 +50,7 @@ const AddTask = ({onAdd}) => {
       </div>
       <input type="submit" value="Save Task" className="btn btn-block"/>
     </form>
+    
   )
 }
 

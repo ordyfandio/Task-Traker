@@ -1,14 +1,18 @@
 import PropTypes from 'prop-types'
+// import { useState } from 'react'
 
-const Button = ({color,text,onClick}) => {
-    
-    // const onclick=() =>{
-    //      console.log("click") 
-    // }
+const Button = ({color,text, show }) => {
+//   const [showNew, setShowNew] = useState(show);
+
+//  const onclick=() =>{
+//   setShowNew(!show);
+//     }
 
   return (
-    <button onClick={onclick} className='btn' style={{backgroundColor:color}}>{text}</button>
-  )
+    <>
+    {/* {console.log(show)} */}
+    <button onClick={() => show()} className='btn' style={{backgroundColor:color}}>{text}</button>
+ </> )
 }
 
 Button.defaultProps={
